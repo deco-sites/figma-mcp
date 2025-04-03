@@ -23,9 +23,7 @@
     "directives": []
   },
   "firstByteThresholdMS": false,
-  "theme": {
-    "__resolveType": "Neutral"
-  },
+ 
   "figmaAccessToken": {
     "__resolveType": "website/loaders/secret.ts",
     "encrypted": "542667ef7bf9600ae0e08fa585aff53b6bbd3d6ff7ba747a2ddbc6927de8f1db91b1ba0f604026a8b3f7dcb4ac3d60e1",
