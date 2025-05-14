@@ -1,14 +1,27 @@
 import { AppContext } from "site/apps/site.ts";
 
+interface Props {
+  /**
+   * @description The Figma file key to get information from
+   * @example "FpnkfUhKcNS9S4JQFJexL"
+   */
+  fileKey: string;
+  /**
+   * @description IDs of the nodes you want to get images from
+   * @example "1-2"
+   */
+  nodeId: string;
+}
+
 export default async function loader(
-  props: { key: string; nodeId: string },
+  props: Props,
   _req: Request,
   ctx: AppContext,
 ) {
   const figmaAccessToken = ctx.figmaAccessToken;
 
-  if (!props.key || !props.nodeId) {
-    throw new Error("key e nodeId são obrigatórios");
+  if (!props.fileKey || !props.nodeId) {
+    throw new Error("fileKey e nodeId são obrigatórios");
   }
 
   if (!figmaAccessToken) {
@@ -16,7 +29,7 @@ export default async function loader(
   }
 
   const response = await fetch(
-    `https://api.figma.com/v1/files/${props.key}/nodes?ids=${props.nodeId}`,
+    `https://api.figma.com/v1/files/${props.fileKey}/nodes?ids=${props.nodeId}`,
     {
       headers: {
         "X-FIGMA-TOKEN": figmaAccessToken,

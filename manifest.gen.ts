@@ -5,10 +5,12 @@
 import * as $$$$$$$$$$$0 from "./apps/deco/website.ts";
 import * as $$$$$$$$$$$1 from "./apps/site.ts";
 import * as $$$0 from "./loaders/getComponent.ts";
+import * as $$$1 from "./loaders/getImages.ts";
 
 const manifest = {
   "loaders": {
     "site/loaders/getComponent.ts": $$$0,
+    "site/loaders/getImages.ts": $$$1,
   },
   "apps": {
     "site/apps/deco/website.ts": $$$$$$$$$$$0,
