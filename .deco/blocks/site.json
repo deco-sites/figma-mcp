@@ -37,7 +37,7 @@
   },
   "figmaAccessToken": {
     "__resolveType": "website/loaders/secret.ts",
-    "encrypted": "89c2473374f94838b42b60a6a6963f5ff5203c618950b2a8df8613cab5ca2a9fa7618391177f2af1bbdf9acb59c21780",
+    "encrypted": "0f2c044a729ba02d8a18fb718a0007bf2f0eb1d998e41cb79bfa9501be488127a867496dda4d3e993c3038c2df8f72d7",
     "name": "figmaAccessToken"
   }
 }
